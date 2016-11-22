@@ -4,7 +4,7 @@ import shopping_basket_management.*;
 
 public class ShoppingBasketTest {
 
-ShoppingBasket basket;
+ShoppingBasket shoppingbasket;
 Camembert camembert;
 Gouda gouda;
 Manchego manchego;
@@ -12,7 +12,7 @@ Mozzarella mozzarella;
 
 @Before
 public void before() {
-  basket = new ShoppingBasket();
+  shoppingbasket = new ShoppingBasket();
   camembert = new Camembert("Camembert", 5.95);
   gouda = new Gouda("Gouda", 4.55);
   manchego = new Manchego("Manchego", 6.05);
@@ -21,8 +21,20 @@ public void before() {
 
 @Test
 public void canAddCamembertToBasket() {
-  asserEquals("Camembert" 5.95, basket.addCheese(camembert);
+  shoppingbasket.addCheese(camembert);
+  assertEquals(1, shoppingbasket.getBasket().size());
 }
+
+@Test
+public void canAdd3CheesesToBasket() {
+  shoppingbasket.addCheese(camembert);
+  shoppingbasket.addCheese(gouda);
+  shoppingbasket.addCheese(manchego);
+  assertEquals(3, shoppingbasket.getBasket().size());
+}
+
+@Test
+public void canRemove
 
 
 }

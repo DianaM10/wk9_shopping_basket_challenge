@@ -10,10 +10,17 @@ public class ShoppingBasket {
 
   }
 
-  public void addCheese(Cheese cheese) {
-    this.basket.put(cheese.getType, cheese.getPrice);
+  public HashMap getBasket() {
+    return this.basket;
   }
+
+  public void addCheese(Cheese cheese) {
+    this.basket.put(cheese.getType(), cheese.getPrice());
   
 
+  public void removeItem(Cheese cheese) {
+    this.basket.remove(cheese.getType());
+  }
 
+}
 }
