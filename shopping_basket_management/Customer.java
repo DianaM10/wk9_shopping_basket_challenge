@@ -5,7 +5,7 @@ public class Customer {
 
   String name;
   Boolean loyaltyCard;
-  ShoppingBasket shoppingBasket;
+  public ShoppingBasket shoppingBasket;
 
 
   public Customer(String name, Boolean loyaltyCard) {
@@ -18,12 +18,12 @@ public class Customer {
     return(name);
   }
 
-  public Boolean getloyaltyCard() {
+  public Boolean getLoyaltyCard() {
     return(loyaltyCard);
   }
 
-  public void setloyaltyCard() {
-    this.loyaltyCard = true;
+  public void setLoyaltyCard(Boolean loyaltyCard) {
+    this.loyaltyCard = loyaltyCard;
 
   }
 
