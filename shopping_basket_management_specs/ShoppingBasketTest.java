@@ -22,7 +22,7 @@ public void before() {
 @Test
 public void canAddCamembertToBasket() {
   shoppingbasket.addCheese(camembert);
-  assertEquals(1, shoppingbasket.getBasket().size());
+  assertEquals(1, shoppingbasket.basketCount());
 }
 
 @Test
@@ -30,11 +30,26 @@ public void canAdd3CheesesToBasket() {
   shoppingbasket.addCheese(camembert);
   shoppingbasket.addCheese(gouda);
   shoppingbasket.addCheese(manchego);
-  assertEquals(3, shoppingbasket.getBasket().size());
+  assertEquals(3, shoppingbasket.basketCount());
 }
 
 @Test
-public void canRemove
+public void canRemoveCheeseFromBasket() {
+  shoppingbasket.addCheese(camembert);
+  shoppingbasket.addCheese(gouda);
+  shoppingbasket.addCheese(manchego);
+  shoppingbasket.removeItem(gouda);
+  assertEquals(2, shoppingbasket.basketCount());
+}
+
+@Test
+public void canClearBasket() {
+  shoppingbasket.addCheese(camembert);
+  shoppingbasket.addCheese(gouda);
+  shoppingbasket.addCheese(manchego);
+  shoppingbasket.emptyBasket();
+  assertEquals(0, shoppingbasket.basketCount());
+}
 
 
 }

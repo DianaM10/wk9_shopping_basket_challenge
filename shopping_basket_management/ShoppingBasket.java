@@ -1,26 +1,32 @@
 package shopping_basket_management;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class ShoppingBasket {
 
-  HashMap< String, Double > basket;
+  ArrayList<Cheese> basket;
 
   public ShoppingBasket() {
-    basket = new HashMap< String, Double >();
+    this.basket = new ArrayList<Cheese>();
 
   }
 
-  public HashMap getBasket() {
-    return this.basket;
-  }
+  // public HashMap getBasket() {
+  //   return this.basket;
+  // }
 
   public void addCheese(Cheese cheese) {
-    this.basket.put(cheese.getType(), cheese.getPrice());
-  
-
-  public void removeItem(Cheese cheese) {
-    this.basket.remove(cheese.getType());
+    this.basket.add(cheese);
   }
 
-}
+  public int basketCount() {
+    return this.basket.size();
+  }
+
+  public void removeItem(Cheese cheese) {
+    this.basket.remove(cheese);
+  }
+
+  public void emptyBasket() {
+    this.basket.clear();
+  }
 }
