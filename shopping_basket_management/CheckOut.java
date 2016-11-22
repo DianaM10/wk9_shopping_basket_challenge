@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class CheckOut {
 
-Customer customer;
+public Customer customer;
 
 public CheckOut(Customer customer) {
   this.customer = customer;
@@ -12,7 +12,8 @@ public CheckOut(Customer customer) {
 public double totalCost() {
   double total = 0;
   ArrayList toBuy = this.customer.shoppingBasket.basket;
-  for (Cheese cheese : toBuy) {
+  for (Object object : toBuy) {
+    Cheese cheese = ((Cheese) object);
    total += cheese.getPrice();
   }
   return total;
