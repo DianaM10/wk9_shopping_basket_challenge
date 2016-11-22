@@ -10,9 +10,6 @@ public class ShoppingBasket {
 
   }
 
-  // public HashMap getBasket() {
-  //   return this.basket;
-  // }
 
   public void addCheese(Cheese cheese) {
     this.basket.add(cheese);
