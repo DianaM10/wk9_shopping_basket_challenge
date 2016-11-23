@@ -20,10 +20,10 @@ public void before() {
   checkOut = new CheckOut(customer1);
   customer2 = new Customer("Pat", true);
   checkOut2 = new CheckOut(customer2);
-  camembert = new Camembert("Camembert", 5.95);
-  gouda = new Gouda("Gouda", 4.55);
-  manchego = new Manchego("Manchego", 6.05);
-  mozzarella = new Mozzarella("Mozzarella", 3.95);
+  camembert = new Camembert("Camembert", 5.95, false);
+  gouda = new Gouda("Gouda", 4.55, true);
+  manchego = new Manchego("Manchego", 6.05, false);
+  mozzarella = new Mozzarella("Mozzarella", 3.95, true);
 }
 
 @Test

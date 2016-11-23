@@ -29,6 +29,43 @@ public double totalCost() {
   else return total;
 }
 
+// public bogofDiscount() {
+//   ArrayList bogofs = new ArrayList<BOGOFable>();
+//   ArrayList toBuy = this.customer.shoppingBasket.basket;
+//   for (Object object : toBuy) {
+//     Cheese cheese = ((Cheese) object);
+//     if (cheese instanceof BOGOFable) {
+//       bogofs.add(cheese);
+//     }
+//       // for (BOGOFable item : bogofs) {
+//     ArrayList duplicate = new ArrayList<cheese>();
+//         for (Cheese cheese : bogofs ) {
+          
+
+//           }
+//         }
+
+//           }
+
+//         }
+//       }
+
+
+
+
+
+
+// public double checkForLoyaltyDiscount() {
+//   double total = this.totalCost();
+//   if (this.customer.getLoyaltyCard() == true && total <= 20) {
+//   return (total * 0.98);
+//   }
+//   if (this.customer.getLoyaltyCard() == true && total >= 20) {
+//   return (total * 0.98)*0.9;
+//   }
+//   else return total;
+//   }
+
 
 
 }

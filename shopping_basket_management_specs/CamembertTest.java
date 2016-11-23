@@ -8,7 +8,7 @@ Camembert camembert;
 
 @Before
 public void before() {
-  camembert = new Camembert("Camembert", 5.95);
+  camembert = new Camembert("Camembert", 5.95, false);
 }
 
 @Test
