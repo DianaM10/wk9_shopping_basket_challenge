@@ -16,9 +16,16 @@ public double totalCost() {
     Cheese cheese = ((Cheese) object);
    total += cheese.getPrice();
   }
-  if (this.customer.getLoyaltyCard() == true) {
+  if (this.customer.getLoyaltyCard() == false && total >= 20) {
+    return (total * 0.9);
+  }
+  if (this.customer.getLoyaltyCard() == true && total <= 20) {
     return (total * 0.98);
   }
+  if (this.customer.getLoyaltyCard() == true && total >= 20) {
+    return (total * 0.98)*0.9;
+  }
+  
   else return total;
 }
 

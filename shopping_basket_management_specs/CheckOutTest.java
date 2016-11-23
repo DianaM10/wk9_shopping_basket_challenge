@@ -38,13 +38,21 @@ public void canGetTotalCostOfBasket() {
 }
 
 @Test
-public void canGetTotalCostOfBasketWithLoadsOfCheese() {
+public void canGetTotalWithoutDiscount(){
+customer1.shoppingBasket.addCheese(gouda);
+customer1.shoppingBasket.addCheese(camembert);
+customer1.shoppingBasket.addCheese(manchego);
+  assertEquals(16.55, checkOut.totalCost(),0.01);
+}
+
+@Test
+public void canGetDIscountOnTotalCost() {
   customer1.shoppingBasket.addCheese(gouda);
   customer1.shoppingBasket.addCheese(camembert);
   customer1.shoppingBasket.addCheese(manchego);
   customer1.shoppingBasket.addCheese(mozzarella);
   customer1.shoppingBasket.addCheese(gouda);
-  assertEquals(25.05, checkOut.totalCost(),0.01);
+  assertEquals(22.545, checkOut.totalCost(),0.01);
 }
 
 @Test
@@ -54,7 +62,7 @@ public void customerCanGetLoyaltyDiscount() {
   customer2.shoppingBasket.addCheese(manchego);
   customer2.shoppingBasket.addCheese(mozzarella);
   customer2.shoppingBasket.addCheese(gouda);
-  assertEquals(24.549, checkOut2.totalCost(),0.01);
+  assertEquals(22.0941, checkOut2.totalCost(),0.01);
 }
 
 
